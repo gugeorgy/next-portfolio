@@ -1,3 +1,65 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:@next/next/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.eslint.json"],
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint/eslint-plugin"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": [
+      "error",
+      {
+        "functions": "defaultArguments"
+      }
+    ],
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["case", "default"], "next": "*" },
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.[tt]s?(x)"],
+      "extends": ["plugin:@typescript-eslint/recommended"]
+    },
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ]
+      // "env": {
+      //   "jest/globals": true
+      // },
+      // "extends": ["plugin:jest/recommended", "plugin:testing-library/react"]
+    }
+  ]
 }
