@@ -47,19 +47,19 @@
     ]
   },
   "overrides": [
-    {
-      "files": ["**/*.[tt]s?(x)"],
-      "extends": ["plugin:@typescript-eslint/recommended"]
-    },
-    {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ]
-      // "env": {
-      //   "jest/globals": true
-      // },
-      // "extends": ["plugin:jest/recommended", "plugin:testing-library/react"]
-    }
+    // {
+    //   "files": ["**/*.[tt]s?(x)"],
+    //   "extends": ["plugin:@typescript-eslint/recommended"]
+    // }
+    // {
+    //   "files": [
+    //     "**/__tests__/**/*.[jt]s?(x)",
+    //     "**/?(*.)+(spec|test).[jt]s?(x)"
+    //   ]
+    //   "env": {
+    //     "jest/globals": true
+    //   },
+    //   "extends": ["plugin:jest/recommended", "plugin:testing-library/react"]
+    // }
   ]
 }

@@ -1,8 +1,14 @@
 {
-  "name": "next-dx",
+  "name": "nextjs-dx",
   "version": "0.1.0",
+  "license": "MIT",
+  "description": "Quickly launch a new Next.js app built with the best development experience (DX)",
   "private": true,
   "author": "Georgy :/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugeorgy/nextjs-dx.git"
+  },
   "keywords": [
     "react",
     "nextjs",
