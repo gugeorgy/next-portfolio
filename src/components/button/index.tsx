@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import Text from '@/components/text';
+import Text from '@/components/text/index';
 
-import styles from './Button.module.scss';
+import styles from './Button.module.css';
 import Icon from '../icon';
 
 interface ButtonProp {
@@ -15,7 +15,6 @@ interface ButtonProp {
   align?: 'start' | 'center' | 'end';
 }
 
-// eslint-disable-next-line react/require-default-props
 export default function Button(props: ButtonProp) {
   const { align, contentStyle, disabled, icon, label, onPress } = props;
 

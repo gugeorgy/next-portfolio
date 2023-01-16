@@ -15,29 +15,26 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig.eslint.json"],
+    "project": "./tsconfig.eslint.json",
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint/eslint-plugin"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+    }
+  },
   "rules": {
-    "import/extensions": [
-      0,
-      "ignorePackages",
-      {
-        "js": "never",
-        "ts": "never",
-        "jsx": "never",
-        "tsx": "never"
-      }
-    ],
+    "import/no-unresolved": "error",
+
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "react/forbid-prop-types": "off",
     "react/require-default-props": [
       "error",
       {
-        "functions": "defaultArguments"
+        "functions": "ignore"
       }
     ],
     "padding-line-between-statements": [
