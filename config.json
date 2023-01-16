@@ -1,0 +1,39 @@
+{
+  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
+  "title": "LiveTerm",
+  "name": "Georgy :/",
+  "ascii": "liveterm",
+  "social": {
+    "github": "github",
+    "linkedin": "linkedin"
+  },
+  "email": "contact@email.com",
+  "ps1_hostname": "liveterm",
+  "ps1_username": "visitor",
+  "repo": "https://github.com/Cveinnt/LiveTerm",
+  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "colors": {
+    "light": {
+      "base": "#333333",
+      "primary": "#2196F3",
+      "secondary": "#00000026",
+      "input": "#EEEEEE",
+      "body": "#FAFAFA",
+      "gray": "#999999",
+      "gray-2": "#777777",
+      "white": "#FFFFFF",
+      "success": "#009688",
+      "success-light": "#C8E688",
+      "error": "#E91E63"
+    },
+    "dark": {
+      "background": "#2E3440",
+      "foreground": "#E5E9F0",
+      "yellow": "#5E81AC",
+      "green": "#A3BE8C",
+      "gray": "#88C0D0",
+      "blue": "#EBCB8B",
+      "red": "#BF616A"
+    }
+  }
+}

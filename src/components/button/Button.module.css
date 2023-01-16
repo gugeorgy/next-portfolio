@@ -1,0 +1,5 @@
+/* BUTTON */
+
+.button {
+  @apply flex justify-center items-center gap-3 hover:cursor-auto;
+}

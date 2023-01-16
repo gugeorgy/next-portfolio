@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url(/fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Menlo';
+  src: url(/fonts/Menlo-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url(/fonts/Pacifico-Regular.ttf);
+}
+
+@layer base {
+  :root {
+    --white: #fff;
+    --gray: rgba(0, 0, 0, 0.1);
+    --gray1: hsla(0, 0%, 0%, 0.15);
+    --gray2: rgba(0, 0, 0, 0.2);
+    --gray3: rgba(0, 0, 0, 0.25);
+    --blue1: #2196f3;
+    --blue2: #1e88e5;
+    --blue3: #1976d2;
+    --blue4: rgb(33 150 243/0.7);
+    --red1: #ef5350;
+    --red2: #f44336;
+    --red3: #e53935;
+    --red4: rgba(239, 83, 80, 0.7);
+    --red4: #009688;
+    --primary-bg: var(--blue1);
+    --primary-hover-bg: var(--blue2);
+    --primary-active-bg: var(--blue3);
+    --primary-box-shadow: 0 0px 3px var(--blue4);
+    --secondary-bg: var(--gray1);
+    --secondary-hover-bg: var(--gray1);
+    --secondary-active-bg: var(--gray2);
+    --danger-bg: var(--red1);
+    --danger-hover-bg: var(--red2);
+    --danger-active-bg: var(--red3);
+    --danger-box-shadow: 0 0px 3px var(--red4);
+    --minimal-bg: transparent;
+    --minimal-hover-bg: var(--gray);
+    --minimal-active-bg: var(--gray1);
+    --focus-box-shadow: 0px 0px 0px 2px #fff, 0px 0px 0px 4px var(--gray3);
+    --input-focus-box-shadow: 0px 0px 0px 2px #fff,
+      0px 0px 0px 4px var(--blue1);
+  }
+}
+
+@layer components {
+  html,
+  body {
+    margin: 0;
+    font-family: Menlo, Roboto Mono, monospace;
+    font-size: theme(fontSize[sm]);
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+    color: theme(colors[light][base]);
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-2xl;
+  }
+  img {
+    @apply max-w-full h-auto object-cover;
+  }
+  main {
+    @apply pl-3 pr-3;
+  }
+}
+
+/*.AuthForm {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: white;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.AuthForm form {
+  padding: 30px 20px;
+  border: 2px solid var(--gray);
+  border-radius: 20px;
+}
+
+.AuthForm .BackLink {
+  padding: 20px 0;
+}
+
+.AuthForm .BackLink a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.AuthForm .BackLink .LinkIcon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.Alert {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+  background: #eee;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.DangerAlert {
+  color: #e91e63;
+  background: #ffebee;
+}
+
+.SuccessAlert {
+  color: #009688;
+  background-color: #e8f5e9;
+}
+
+.WarningAlert {
+  background: #fff8e1;
+  color: #e65100;
+}
+
+.FormSection {
+  margin-bottom: 30px;
+}
+
+.FormSection:last-child {
+  margin-bottom: 10px;
+}
+
+.FormAction {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: -20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 0 -20px;
+  padding: 16px 20px;
+  background-color: #fafafa;
+  border-radius: 0 0 6px 6px;
+}
+
+.FormAction > .Button {
+  width: 48%;
+  margin-right: 5px;
+}
+
+.Label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.Caption {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.Textarea,
+.Input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 14px;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 6px;
+  border: 2px solid #eee;
+  background: #eee;
+  font-family: Menlo, monospace;
+  color: #333;
+  width: 100%;
+}
+
+.Textarea:focus,
+.Textarea:active,
+.Input:focus,
+.Input:active {
+  outline: none;
+  -webkit-box-shadow: var(--input-focus-box-shadow);
+          box-shadow: var(--input-focus-box-shadow);
+}
+
+.Input[disabled] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  background-color: #fafafa !important;
+  border-color: #ddd !important;
+  cursor: not-allowed;
+}
+
+.Group {
+  margin-top: 30px;
+}
+
+.Group:first-child {
+  margin-top: 0px;
+}
+
+.Group .Label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+// WEBPACK FOOTER //
+// ./src/components/Form/Form.css*/

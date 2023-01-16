@@ -1,0 +1,5 @@
+/* ICON */
+
+.icon {
+  @apply inline-flex justify-center items-center;
+}
