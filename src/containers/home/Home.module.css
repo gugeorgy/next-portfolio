@@ -1,0 +1,15 @@
+/* HOME */
+
+.home {
+  @apply h-full rounded-2xl p-4;
+  border: 2px solid theme(colors[light][base]);
+  & .wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    /* @apply h-full bg-dark-red; */
+    & .prompt {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+    }
+  }
+}

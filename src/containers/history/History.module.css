@@ -1,0 +1,8 @@
+/* HISTORY */
+
+.history {
+  /* @apply bg-green-300; */
+  .command {
+    @apply text-light-gray;
+  }
+}

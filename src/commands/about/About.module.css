@@ -1,0 +1,5 @@
+/* ABOUT */
+
+.command {
+  @apply text-light-success;
+}

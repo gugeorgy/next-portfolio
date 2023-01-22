@@ -1,9 +1,7 @@
 import React from 'react';
 
-import Text from '@/components/text';
+import Home from '@/containers/home';
 
-import '@/styles/globals.css';
-
-export default function Home() {
-  return <Text>Home works!</Text>;
+export default function App() {
+  return <Home />;
 }

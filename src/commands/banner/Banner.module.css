@@ -1,0 +1,21 @@
+/* BANNER */
+
+.container {
+  @apply flex flex-col gap-3;
+  .command {
+    @apply text-light-success;
+  }
+  .banner {
+    @apply flex items-center gap-4;
+    .boxImage {
+      @apply w-20 h-20;
+      img {
+        @apply h-full rounded-xl;
+      }
+    }
+    .logo {
+      @apply text-5xl;
+      font-family: 'Pacifico', cursive;
+    }
+  }
+}

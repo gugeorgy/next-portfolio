@@ -28,6 +28,8 @@
   "rules": {
     "import/no-unresolved": "error",
 
+    "import/no-cycle": [2, { "maxDepth": 1 }],
+
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "react/forbid-prop-types": "off",

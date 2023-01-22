@@ -4,17 +4,17 @@
 
 @font-face {
   font-family: 'Roboto Mono';
-  src: url(/fonts/RobotoMono-Regular.ttf);
+  src: url(/assets/fonts/RobotoMono-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Menlo';
-  src: url(/fonts/Menlo-Regular.ttf);
+  src: url(/assets/fonts/Menlo-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Pacifico';
-  src: url(/fonts/Pacifico-Regular.ttf);
+  src: url(/assets/fonts/Pacifico-Regular.ttf);
 }
 
 @layer base {
@@ -63,18 +63,43 @@
     overflow-x: hidden;
     -webkit-text-size-adjust: none;
     color: theme(colors[light][base]);
+    background-color: theme(colors[light][body]);
   }
   h1,
   h2,
-  h3 {
-    @apply text-2xl;
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-2xl font-bold;
+  }
+  a {
+    @apply relative underline cursor-text hover:decoration-2 hover:bg-light-input;
+    &[data-title]:hover::after {
+      @apply absolute left-0 bg-light-input p-1;
+      content: attr(data-title);
+      top: -150%;
+    }
   }
   img {
     @apply max-w-full h-auto object-cover;
   }
-  main {
-    @apply pl-3 pr-3;
+  input,
+  button {
+    border: none;
+    outline: none;
+    background: none;
   }
+  input {
+    width: 100%;
+  }
+  main {
+    @apply h-screen w-full p-3;
+  }
+}
+
+.hljs-comment {
+  @apply text-light-gray;
 }
 
 /*.AuthForm {

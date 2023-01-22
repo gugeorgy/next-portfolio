@@ -1,0 +1,18 @@
+/* README */
+
+.readme {
+  @apply flex flex-col gap-4;
+  code {
+    padding: 2px 4px;
+    @apply bg-light-input rounded-md;
+  }
+  pre {
+    .highlighter {
+      @apply bg-light-input p-3 rounded-md;
+      code {
+        @apply bg-transparent rounded-none;
+        padding: 0;
+      }
+    }
+  }
+}

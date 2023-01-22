@@ -1,0 +1,11 @@
+/* PS1 */
+
+.PS1 {
+  user-select: none;
+  & .username {
+    @apply text-light-error;
+  }
+  & .hostname {
+    @apply text-light-success;
+  }
+}
